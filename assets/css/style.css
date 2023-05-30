@@ -13,3 +13,7 @@ body{
 .olvide-contrasena{
     color: gray;
 }
+
+.modal-content{
+    border: 4px #024795 solid;
+}
