@@ -30,7 +30,11 @@
         <div class="main-container d-flex">
             <div class="sidebar">
                 <div class="heador-box d-flex flex-column p-3">
-                    <i class="bi bi-list align-self-end text-white fs-3"></i>
+                    <button
+                        class="btn close-btn align-self-end text-white p-0 d-md-none d-block"
+                    >
+                        <i class="bi bi-list fs-3"></i>
+                    </button>
                     <img
                         src="/assets/img/logo-gb-figma.png"
                         class="img-fluid"
@@ -39,8 +43,37 @@
                     <hr class="opacity-100 text-white" />
                 </div>
             </div>
-            <div class="content">
+            <div class="content m-3 p-3">
                 <h1>Usuarios</h1>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
