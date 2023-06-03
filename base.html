@@ -27,80 +27,81 @@
         />
     </head>
     <body>
-        <div class="main-container d-flex">
-            <div class="sidebar d-flex flex-column justify-content-between">
-                <div class="header-box d-flex flex-column p-3">
-                    <button
-                        class="btn close-btn align-self-end text-white p-0 d-md-none d-block"
-                    >
-                        <i class="bi bi-list fs-3"></i>
-                    </button>
-                    <img
-                        src="/assets/img/logo-gb-figma.png"
-                        class="img-fluid"
-                        alt=""
-                    />
-                    <hr class="opacity-100 text-white" />
-                </div>
-                <nav id="sidebar-nav">
-                    <ul class="list-unstyled p-3">
-                        <li class="active p-2">
-                            <a href="#" class="text-decoration-none text-white">
-                                <i class="bi bi-people-fill"></i>
-                                Usuarios
-                            </a>
-                        </li>
-                        <li class="mt-3 p-2">
-                            <a href="#" class="text-decoration-none text-white">
-                                <i class="bi bi-people"></i>
-                                Clientes
-                            </a>
-                        </li>
-                        <li class="mt-3 p-2">
-                            <a href="#" class="text-decoration-none text-white">
-                                <i class="bi bi-link-45deg"></i>
-                                Monitoreo de URL'S
-                            </a>
-                        </li>
-                        <li class="mt-3 p-2">
-                            <a href="#" class="text-decoration-none text-white">
-                                <i class="bi bi-key"></i>
-                                Keywords
-                            </a>
-                        </li>
-                        <li class="mt-3 p-2">
-                            <a href="#" class="text-decoration-none text-white">
-                                <i class="bi bi-search"></i>
-                                Búsquedas recientes
-                            </a>
-                        </li>
-                        <li class="mt-3 p-2">
-                            <a href="#" class="text-decoration-none text-white">
-                                <i class="bi bi-card-list"></i>
-                                Resultados de búsqueda
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+        <div class="sidebar d-flex flex-column justify-content-between overflow-auto">
+            <div class="header-box d-flex flex-column p-3">
+                <button
+                    class="btn close-btn align-self-end text-white p-0 d-md-none d-block"
+                >
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+                <img
+                    src="/assets/img/logo-gb-figma.png"
+                    class="img-fluid"
+                    alt=""
+                />
+                <hr class="opacity-100 text-white" />
+            </div>
+            <nav id="sidebar-nav">
+                <ul class="list-unstyled p-3">
+                    <li class="active p-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            <i class="bi bi-people-fill"></i>
+                            Usuarios
+                        </a>
+                    </li>
+                    <li class="mt-sm-1 mt-lg-2 p-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            <i class="bi bi-people"></i>
+                            Clientes
+                        </a>
+                    </li>
+                    <li class="mt-sm-1 mt-lg-2 p-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            <i class="bi bi-link-45deg"></i>
+                            Monitoreo de URL'S
+                        </a>
+                    </li>
+                    <li class="mt-sm-1 mt-lg-2 p-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            <i class="bi bi-key"></i>
+                            Keywords
+                        </a>
+                    </li>
+                    <li class="mt-sm-1 mt-lg-2 p-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            <i class="bi bi-search"></i>
+                            Búsquedas recientes
+                        </a>
+                    </li>
+                    <li class="mt-sm-1 mt-lg-2 p-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            <i class="bi bi-card-list"></i>
+                            Resultados de búsqueda
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-                <div class="sidebar-footer p-3">
-                    <hr class="opacity-100 text-white" />
-                    <div class="d-flex">
-                        <p class="text-white m-0">
-                            Jonathan Tinoco
-                            <a
-                                class="text-decoration-none email"
-                                href="mailto:tinocojona@outlook.com"
-                                >tinocojona@outlook.com</a
-                            >
-                        </p>
-                        <button class="btn close-btn text-white">
-                            <i class="bi bi-box-arrow-left fs-4"></i>
-                        </button>
-                    </div>
+            <div class="sidebar-footer p-3">
+                <hr class="opacity-100 text-white" />
+                <div class="d-flex">
+                    <p class="text-white m-0">
+                        Jonathan Tinoco
+                        <a
+                            class="text-decoration-none email"
+                            href="mailto:tinocojona@outlook.com"
+                            >tinocojona@outlook.com</a
+                        >
+                    </p>
+                    <button class="btn close-btn text-white">
+                        <i class="bi bi-box-arrow-left fs-4"></i>
+                    </button>
                 </div>
             </div>
-            <div class="content m-3 p-3">
+        </div>
+
+        <div class="content m-3 p-3">
+            <div class="something">
                 <h1>Usuarios</h1>
                 <table class="table mt-3">
                     <thead>
@@ -132,6 +133,137 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="something">
+                <h1>Usuarios</h1>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="something">
+                <h1>Usuarios</h1>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="something">
+                <h1>Usuarios</h1>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="something">
+                <h1>Usuarios</h1>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         </div>
 
         <script
