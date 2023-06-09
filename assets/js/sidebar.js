@@ -4,6 +4,7 @@ links = [...links]
 links.forEach((link) => {
     link.addEventListener('click', () => {
         var elemento = document.querySelector('.active')
+        console.log(elemento);
         if (elemento) {
             elemento.classList.remove('active')
         }
