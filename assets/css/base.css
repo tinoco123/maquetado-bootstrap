@@ -1,44 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: white;
+body,
+html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 50;
-    height: 100%;
+    width: 75px;
     background-image: radial-gradient(circle 975px at 2.6% 48.3%, rgba(1, 62, 210, 1) 0%, rgba(0, 57, 197, 1) 99.7%);
-    min-width: 270px;
-    max-width: 270px;    
+    height: 100%;
+    transition: all 0.3s ease;
 }
 
-.main-content {
+.sidebar-nav{
+    height: auto;
+}
+
+.sidebar-nav li a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.sidebar-nav li a:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-footer{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 75px;
+}
+
+.menu-item{
+    display: none;
+}
+
+.profile{
+    display: none;
+}
+
+.content {
     position: absolute;
     top: 0;
-    left: 270px;
-    width: calc(100% - 286px);
-    display: flex;   
-    flex-direction: column;
+    left: 75px;
+    width: calc(100% - 75px)
 }
 
-
-
-
-.sidebar nav li:hover, .sidebar nav li.active{
-    
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+.opciones-arriba {
+    position: relative;
 
 }
 
-.sidebar nav li.active {
-    border: 1px solid white;
+.filtros {
+    width: 150px;
+    cursor: pointer;
 }
 
-.email{
-    color: rgb(180, 180, 180);
+.fecha{
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.fecha:focus{
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+}
+
+input:focus-visible{
+    outline: 0;
+    border-color: #86b7fe;
+}
+
+.opciones-abajo{
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+
+    /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor a 993px */
+    .sidebar {
+        width: 260px;
+        
+    }
+
+    .sidebar-nav li a{
+        justify-content: start;
+    }
+    .sidebar-footer{
+        width: 260px;
+    }
+
+    .content {
+        left: 260px;
+        width: calc(100% - 260px)
+    }
+
+    .menu-item{
+        display: inline;
+    }
+
+    .profile{
+        display: flex;
+    }
 }
