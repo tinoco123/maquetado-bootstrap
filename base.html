@@ -103,8 +103,8 @@
 
         <div class="content d-flex flex-column">
             <header class="mt-3 mx-3 text-center">
-                <h2 class="display-3 fw-semibold">
-                    <i class="bi bi-people-fill me-3"></i>Usuarios
+                <h2 class="display-4 fw-semibold">
+                    <i class="bi bi-people-fill me-3"></i>Resultados de búsqueda
                 </h2>
             </header>
 
@@ -135,111 +135,26 @@
                 />
             </div>
 
-            <div class="table-container mx-3 mx-lg-5 p-2 d-flex mt-3">
+            <div
+                class="table-container  mx-3 p-2 d-flex flex-column flex-lg-row justify-content-centers align-items-center mt-3"
+            >
                 <ul
-                    class="list-unstyled border m-0 p-2 rounded keyword-list"
+                    class="list-unstyled border mx-3 mx-lg-0 p-2 rounded keyword-list d-flex flex-lg-column align-items-center"
                 >
-                    <li>
-                        <p class=" fw-bold text-center">Keywords</p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
-                        </p>
-                    </li>
-                    <li>
-                        <p class="d-flex">
-                            <i class="bi bi-key"></i>
-                            <span class="ms-2">Keyword</span>
+                    <li
+                        class="border rounded-2 bg-light p-2 d-flex align-items-center keyword-li"
+                    >
+                        <p class="d-flex m-0">
+                            <span>Elecciones presidenciales</span>
                         </p>
                     </li>
                 </ul>
 
-                <table id="example-table" class="ms-3 mt-0">
-                    <thead>
-                        <tr>
-                            <th>Página</th>
-                            <th>Fecha de publicación</th>
-                            <th>Estado</th>
-                            <th>URL</th>
-                            <th>Zona</th>
-                            <th>Categoría</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div id="example-table" class="mt-0 ms-lg-3"></div>
             </div>
 
             <div
-                class="opciones-abajo d-flex flex-column flex-sm-row justify-content-sm-between px-3 px-sm-4 px-lg-5 mb-3"
+                class="opciones-abajo d-flex flex-column flex-sm-row justify-content-sm-between px-3 px-lg-5 mb-3"
             >
                 <button class="btn btn-danger px-1 p-sm-2">
                     <i
@@ -249,9 +164,46 @@
                 </button>
 
                 <button class="btn btn-primary px-1 p-sm-2 mt-2 mt-md-0">
-                    <i class="bi bi-envelope fs-5 me-1 me-sm-2"></i>
+                    <i class="bi bi-envelope-fill fs-5 me-1 me-sm-2"></i>
                     Enviar por email
                 </button>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Modal title
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 

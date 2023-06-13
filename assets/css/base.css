@@ -100,13 +100,26 @@ input:focus-visible{
     overflow-y: auto;
 }
 
+
+
+.keyword-li{
+    height: auto;
+    max-height: 55px;
+    width: auto;
+    max-width: 130px;
+}
+
+#example-table{
+    height: 550px;
+}
+
 .opciones-abajo{
     width: 100%;
 }
 
 @media (min-width: 992px) {
 
-    /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor a 993px */
+    /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor a 991px */
     .sidebar {
         width: 260px;
         
@@ -130,5 +143,13 @@ input:focus-visible{
 
     .profile{
         display: flex;
+    }
+}
+
+@media (max-width: 991px) {
+    .keyword-list{
+        height: 75px;
+        width: 100%;
+        overflow-x: auto;
     }
 }
