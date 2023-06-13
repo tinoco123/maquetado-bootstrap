@@ -96,24 +96,20 @@ input:focus-visible{
     top: 0;
     left: 0;
     height: 550px;
-    width: 150px;
+    width: 180px;
     overflow-y: auto;
 }
 
 
 
 .keyword-li{
-    height: auto;
-    max-height: 55px;
     width: auto;
-    max-width: 130px;
+    max-width: 175px;
 }
 
 #example-table{
     height: 550px;
 }
-
-
 
 @media (min-width: 992px) {
 
@@ -146,7 +142,7 @@ input:focus-visible{
 
 @media (max-width: 991px) {
     .keyword-list{
-        height: 75px;
+        height: 135px;
         width: 100%;
         overflow-x: auto;
     }
