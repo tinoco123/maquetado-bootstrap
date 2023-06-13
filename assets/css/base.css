@@ -16,11 +16,11 @@ html {
     transition: all 0.3s ease;
 }
 
-.sidebar-nav{
+.sidebar-nav {
     height: auto;
 }
 
-.sidebar-nav li a{
+.sidebar-nav li a {
     display: flex;
     height: 100%;
     width: 100%;
@@ -30,31 +30,31 @@ html {
     transition: all 0.4s ease;
 }
 
-.active{
+.active {
     border: 1px solid white;
     background: rgba(255, 255, 255, 0.1);
 }
 
-.sidebar-nav li{
+.sidebar-nav li {
     border-radius: 16px;
 }
 
-.sidebar-nav li a:hover{
+.sidebar-nav li a:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.sidebar-footer{
+.sidebar-footer {
     position: fixed;
     left: 0px;
     bottom: 0px;
     width: 75px;
 }
 
-.menu-item{
+.menu-item {
     display: none;
 }
 
-.profile{
+.profile {
     display: none;
 }
 
@@ -66,32 +66,29 @@ html {
     width: calc(100% - 75px)
 }
 
-.opciones-arriba {
-    position: relative;
-
-}
-
 
 .filtros {
-    width: 150px;
+    width: 155px;
     cursor: pointer;
 }
 
-.fecha{
+
+
+.fecha {
     border: 1px solid #dee2e6;
     border-radius: 6px;
 }
 
-.fecha:focus{
+.fecha:focus {
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
 }
 
-input:focus-visible{
+.fecha:focus-visible {
     outline: 0;
     border-color: #86b7fe;
 }
 
-.keyword-list{
+.keyword-list {
     position: relative;
     top: 0;
     left: 0;
@@ -102,12 +99,12 @@ input:focus-visible{
 
 
 
-.keyword-li{
+.keyword-li {
     width: auto;
     max-width: 175px;
 }
 
-#example-table{
+#example-table {
     height: 550px;
 }
 
@@ -116,13 +113,14 @@ input:focus-visible{
     /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor a 991px */
     .sidebar {
         width: 260px;
-        
+
     }
 
-    .sidebar-nav li a{
+    .sidebar-nav li a {
         justify-content: start;
     }
-    .sidebar-footer{
+
+    .sidebar-footer {
         width: 260px;
     }
 
@@ -131,17 +129,17 @@ input:focus-visible{
         width: calc(100% - 260px)
     }
 
-    .menu-item{
+    .menu-item {
         display: inline;
     }
 
-    .profile{
+    .profile {
         display: flex;
     }
 }
 
 @media (max-width: 991px) {
-    .keyword-list{
+    .keyword-list {
         height: 135px;
         width: 100%;
         overflow-x: auto;
