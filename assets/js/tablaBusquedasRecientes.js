@@ -21,7 +21,7 @@ var tableData = [
 
 
 var table = new Tabulator("#example-table", {
-    layout:"fitColumns",
+    layout:"fitDataStretch",
     data: tableData, //set initial table data
     pagination:true,
     paginationSize:10,
