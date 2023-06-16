@@ -23,7 +23,10 @@ var tableData = [
 var table = new Tabulator("#example-table", {
     layout:"fitColumns",
     data: tableData, //set initial table data
-    pagination:"true",
+    pagination:true,
+    paginationSize:10,
+    paginationSizeSelector:[10, 25, 50, 100, true],
+    paginationCounter:"rows",
     columns: [
         {
             formatter: "rowSelection", titleFormatter: "rowSelection", hozAlign: "center", headerHozAlign: "center", resizable: false, headerSort: false, cellClick: function (e, cell) {
