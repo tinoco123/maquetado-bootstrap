@@ -64,7 +64,7 @@ var table = new Tabulator("#example-table", {
         },
         { title: "Keyword", field: "keyword" },
         { title: "Fecha en que se agregó", field: "date", sorter: "date"},
-        { title: "Status", field: "status", formatter: statusFormatter, hozAlign: "center", headerHozAlign: "center", headerSort: false},
+        { title: "Status", field: "status", formatter: statusFormatter, width: 107, resizable: false, hozAlign: "center", headerHozAlign: "center", headerSort: false},
         { title: "Tipo", field: "type" },
         { title: "Acciones", formatter: acctionIcons, width: 107, hozAlign: "center", headerHozAlign: "center", headerSort: false},
     ],
