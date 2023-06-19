@@ -108,6 +108,15 @@ html {
     height: 550px;
 }
 
+.badge-status-ok{
+    background-color: #ECFDF3;
+    color: #027A48;
+}
+.badge-status-bad{
+    background-color: #FEF3F2;
+    color: #B42318;
+}
+
 @media (min-width: 992px) {
 
     /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor a 991px */
