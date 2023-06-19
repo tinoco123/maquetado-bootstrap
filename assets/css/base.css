@@ -145,6 +145,10 @@ html {
     .profile {
         display: flex;
     }
+
+    .filtros{
+        width: 138px;
+    }
 }
 
 @media (max-width: 991px) {
