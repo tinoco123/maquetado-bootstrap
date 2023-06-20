@@ -22,8 +22,9 @@ var tableData = [
 ]
 
 
-var printIcon = function (cell, formatterParams) { //plain text value
-    return "<i class='bi bi-pen fs-5 me-1'></i> <i class='bi bi-trash fs-5'></i>";
+var accionIcons = function (cell, formatterParams) { //plain text value
+    var accionHTML = "<button class='btn p-2' data-bs-toggle='modal' data-bs-target='#editarUsuario'><i class='bi bi-pen fs-5'></i></button> <button class='btn p-2' data-bs-toggle='modal' data-bs-target='#editarUsuario'><i class='bi bi-trash fs-5'></i></button>"
+    return accionHTML;
 };
 
 var table = new Tabulator("#example-table", {
@@ -43,7 +44,7 @@ var table = new Tabulator("#example-table", {
         { title: "ID", field: "id", sorter:"number" },
         { title: "Nombre", field: "nombre"},
         { title: "Fecha de registro", field: "date", sorter: "date" },
-        { title: "Acciones", formatter: printIcon, width: 107, hozAlign: "center", headerHozAlign: "center", headerSort: false },
+        { title: "Acciones", formatter: accionIcons, width: 107, hozAlign: "center", headerHozAlign: "center", headerSort: false },
     ],
 });
 
