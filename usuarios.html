@@ -127,10 +127,11 @@
                 class="d-flex flex-column flex-sm-row justify-content-end align-items-center mt-3 mx-3 mx-lg-5"
             >
                 <div class="d-flex flex-column flex-sm-row align-items-center">
-                
                     <button
                         type="button"
                         class="btn btn-danger p-2 mt-2 filtros"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
                     >
                         <i class="bi bi-plus-square fs-6 me-1"></i>
                         Usuario
@@ -142,6 +143,100 @@
                 class="table-container mx-3 mx-lg-5 mt-3 d-flex flex-column flex-lg-row justify-content-center align-items-center"
             >
                 <div id="example-table" class="mt-0 ms-lg-3"></div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Agregar Usuario
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <div class="col-12">
+                                <label for="inputNombre" class="form-label"
+                                    >Nombre</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputNombre"
+                                    required
+                                />
+                            </div>
+                            <div class="col-12">
+                                <label for="inputEmail4" class="form-label"
+                                    >Email</label
+                                >
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="inputEmail4"
+                                    required
+                                />
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label"
+                                    >Dirección</label
+                                >
+                                <textarea
+                                    id="inputAddress"
+                                    name="address"
+                                    rows="4"
+                                    cols="50"
+                                    class="form-control"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEmpresa" class="form-label"
+                                    >Empresa</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="inputEmpresa"
+                                    required
+                                />
+                            </div>
+                            <div class="col-md-6">
+                                <label
+                                    for="inputFechaNacimiento"
+                                    class="form-label"
+                                    >Fecha de Nacimiento</label
+                                >
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="inputFechaNacimiento"
+                                    required
+                                />
+                            </div>
+                            <div class="col-12 d-flex flex-column">
+                                <button type="submit" class="btn btn-primary">
+                                    Agregar Usuario
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         <script
