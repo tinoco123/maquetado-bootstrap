@@ -46,19 +46,28 @@
 
             <ul class="sidebar-nav list-unstyled mt-4 mt-md-3" id="sidebar-nav">
                 <li class="mx-2 mx-lg-3">
-                    <a href="/usuarios.html" class="text-decoration-none text-white px-2">
+                    <a
+                        href="/usuarios.html"
+                        class="text-decoration-none text-white px-2"
+                    >
                         <i class="bi bi-people-fill fs-3"></i>
                         <span class="ms-2 menu-item">Usuarios</span>
                     </a>
                 </li>
                 <li class="m-2 m-lg-3">
-                    <a href="/clientes.html" class="text-decoration-none text-white px-2">
+                    <a
+                        href="/clientes.html"
+                        class="text-decoration-none text-white px-2"
+                    >
                         <i class="bi bi-people text-white fs-3"></i>
                         <span class="ms-2 menu-item">Clientes</span>
                     </a>
                 </li>
                 <li class="m-2 m-lg-3">
-                    <a href="/monitoreo-urls.html" class="text-decoration-none text-white px-2">
+                    <a
+                        href="/monitoreo-urls.html"
+                        class="text-decoration-none text-white px-2"
+                    >
                         <i class="bi bi-link-45deg text-white fs-3"></i>
                         <span class="ms-2 menu-item">Monitoreo de URL'S</span>
                     </a>
@@ -120,11 +129,7 @@
             <div
                 class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3 mx-3 mx-lg-5"
             >
-                <div
-                    class="mx-0 mx-lg-2 p-0 p-lg-2 mb-2 mb-md-0 filtros"
-                >
-                    
-                </div>
+                <div class="mx-0 mx-lg-2 p-0 p-lg-2 mb-2 mb-md-0 filtros"></div>
                 <div class="d-flex flex-column flex-sm-row">
                     <select
                         class="form-select filtros mx-0 mx-md-2 p-2"
@@ -139,7 +144,12 @@
                         type="date"
                         class="filtros fecha mx-0 mx-md-2 p-2 mt-2 mt-sm-0 ms-sm-2"
                     />
-                    <button type="button" class="btn btn-danger p-2 mt-2 mt-sm-0 ms-sm-2 filtros">
+                    <button
+                        type="button"
+                        class="btn btn-danger p-2 mt-2 mt-sm-0 ms-sm-2 filtros"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalAgregarKeyword"
+                    >
                         <i class="bi bi-plus-square fs-6 me-1"></i>
                         Keyword
                     </button>
@@ -151,7 +161,1110 @@
             >
                 <div id="example-table" class="mt-0 ms-lg-3"></div>
             </div>
-            
+        </div>
+        <!-- Modal agregar keyword-->
+        <div
+            class="modal fade"
+            id="modalAgregarKeyword"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            <img src="assets/img/keyword-agregar.svg" alt="" />
+                            <span class="ms-2">Agregar Keyword</span>
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3" method="POST">
+                            <div class="col-12">
+                                <label for="keywordNombre" class="form-label"
+                                    >Nombre del keyword:</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="keywordNombre"
+                                    name="keywordNombre"
+                                    required
+                                />
+                            </div>
+                            <div class="col-12">
+                                <label for="tipo" class="form-label"
+                                    >Selecciona el tipo de keyword</label
+                                >
+                                <div class="accordion" id="tipo">
+                                    <div class="accordion-item">
+                                        <h2
+                                            class="accordion-header"
+                                            id="congreso-header"
+                                        >
+                                            <button
+                                                class="accordion-button"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#congreso-collapse"
+                                                aria-expanded="true"
+                                                aria-controls="congreso-collapse"
+                                            >
+                                                Congreso
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="congreso-collapse"
+                                            class="accordion-collapse collapse show"
+                                            aria-labelledby="congreso-header"
+                                        >
+                                            <div
+                                                class="accordion-body d-flex px-2"
+                                            >
+                                                <!-- Primera columna -->
+                                                <div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="aguascalientes"
+                                                            value="aguascalientes"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="aguascalientes"
+                                                            >Aguascalientes</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="baja-california"
+                                                            value="baja-california"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="baja-california"
+                                                            >Baja
+                                                            California</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="baja-california-sur"
+                                                            value="baja-california-sur"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="baja-california-sur"
+                                                            >Baja California
+                                                            Sur</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="campeche"
+                                                            value="campeche"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="campeche"
+                                                            >Campeche</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="coahuila"
+                                                            value="coahuila"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="coahuila"
+                                                            >Coahuila</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="colima"
+                                                            value="colima"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="colima"
+                                                            >Colima</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="chiapas"
+                                                            value="chiapas"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="chiapas"
+                                                            >Chiapas</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="chihuahua"
+                                                            value="chihuahua"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="chihuahua"
+                                                            >Chihuahua</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="ciudad-mexico"
+                                                            value="ciudad-mexico"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="ciudad-mexico"
+                                                            >Ciudad de
+                                                            México</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="durango"
+                                                            value="durango"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="durango"
+                                                            >Durango</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="guanajuato"
+                                                            value="guanajuato"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="guanajuato"
+                                                            >Guanajuato</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <!-- Segunda columna -->
+                                                <div class="ms-3">
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="guerrero"
+                                                            value="guerrero"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="guerrero"
+                                                            >Guerrero</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="hidalgo"
+                                                            value="hidalgo"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="hidalgo"
+                                                            >Hidalgo</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="jalisco"
+                                                            value="jalisco"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="jalisco"
+                                                            >Jalisco</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="mexico"
+                                                            value="mexico"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="mexico"
+                                                            >México</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="michoacan"
+                                                            value="michoacan"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="michoacan"
+                                                            >Michoacán</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="morelos"
+                                                            value="morelos"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="morelos"
+                                                            >Morelos</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="nayarit"
+                                                            value="nayarit"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="nayarit"
+                                                            >Nayarit</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="nuevo-leon"
+                                                            value="nuevo-leon"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="nuevo-leon"
+                                                            >Nuevo León</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="oaxaca"
+                                                            value="oaxaca"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="oaxaca"
+                                                            >Oaxaca</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="puebla"
+                                                            value="puebla"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="puebla"
+                                                            >Puebla</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="queretaro"
+                                                            value="queretaro"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="queretaro"
+                                                            >Querétaro</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <!-- Tercera columna -->
+                                                <div class="ms-3">
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="quintana-roo"
+                                                            value="quintana-roo"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="quintana-roo"
+                                                            >Quintana Roo</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="san-luis-potosi"
+                                                            value="san-luis-potosi"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="san-luis-potosi"
+                                                            >San Luis
+                                                            Potosí</label
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="sinaloa"
+                                                                value="sinaloa"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="sinaloa"
+                                                                >Sinaloa</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="sonora"
+                                                                value="sonora"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="sonora"
+                                                                >Sonora</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="tabasco"
+                                                                value="tabasco"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="tabasco"
+                                                                >Tabasco</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="tamaulipas"
+                                                                value="tamaulipas"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="tamaulipas"
+                                                                >Tamaulipas</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="tlaxcala"
+                                                                value="tlaxcala"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="tlaxcala"
+                                                                >Tlaxcala</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="veracruz"
+                                                                value="veracruz"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="veracruz"
+                                                                >Veracruz</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="yucatan"
+                                                                value="yucatan"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="yucatan"
+                                                                >Yucatán</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="zacatecas"
+                                                                value="zacatecas"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="zacatecas"
+                                                                >Zacatecas</label
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2
+                                            class="accordion-header"
+                                            id="estatal-header"
+                                        >
+                                            <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#estatal-collapse"
+                                                aria-expanded="false"
+                                                aria-controls="estatal-collapse"
+                                            >
+                                                Estatal
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="estatal-collapse"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="estatal-header"
+                                        >
+                                            <div class="accordion-body d-flex">
+                                                <!-- Primera columna -->
+                                                <div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="aguascalientes"
+                                                            value="aguascalientes"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="aguascalientes"
+                                                            >Aguascalientes</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="baja-california"
+                                                            value="baja-california"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="baja-california"
+                                                            >Baja
+                                                            California</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="baja-california-sur"
+                                                            value="baja-california-sur"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="baja-california-sur"
+                                                            >Baja California
+                                                            Sur</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="campeche"
+                                                            value="campeche"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="campeche"
+                                                            >Campeche</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="coahuila"
+                                                            value="coahuila"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="coahuila"
+                                                            >Coahuila</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="colima"
+                                                            value="colima"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="colima"
+                                                            >Colima</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="chiapas"
+                                                            value="chiapas"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="chiapas"
+                                                            >Chiapas</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="chihuahua"
+                                                            value="chihuahua"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="chihuahua"
+                                                            >Chihuahua</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="ciudad-mexico"
+                                                            value="ciudad-mexico"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="ciudad-mexico"
+                                                            >Ciudad de
+                                                            México</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="durango"
+                                                            value="durango"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="durango"
+                                                            >Durango</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="guanajuato"
+                                                            value="guanajuato"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="guanajuato"
+                                                            >Guanajuato</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <!-- Segunda columna -->
+                                                <div class="ms-3">
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="guerrero"
+                                                            value="guerrero"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="guerrero"
+                                                            >Guerrero</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="hidalgo"
+                                                            value="hidalgo"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="hidalgo"
+                                                            >Hidalgo</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="jalisco"
+                                                            value="jalisco"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="jalisco"
+                                                            >Jalisco</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="mexico"
+                                                            value="mexico"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="mexico"
+                                                            >México</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="michoacan"
+                                                            value="michoacan"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="michoacan"
+                                                            >Michoacán</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="morelos"
+                                                            value="morelos"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="morelos"
+                                                            >Morelos</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="nayarit"
+                                                            value="nayarit"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="nayarit"
+                                                            >Nayarit</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="nuevo-leon"
+                                                            value="nuevo-leon"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="nuevo-leon"
+                                                            >Nuevo León</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="oaxaca"
+                                                            value="oaxaca"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="oaxaca"
+                                                            >Oaxaca</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="puebla"
+                                                            value="puebla"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="puebla"
+                                                            >Puebla</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="queretaro"
+                                                            value="queretaro"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="queretaro"
+                                                            >Querétaro</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <!-- Tercera columna -->
+                                                <div class="ms-3">
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="quintana-roo"
+                                                            value="quintana-roo"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="quintana-roo"
+                                                            >Quintana Roo</label
+                                                        >
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input
+                                                            class="form-check-input"
+                                                            type="checkbox"
+                                                            name="congreso[]"
+                                                            id="san-luis-potosi"
+                                                            value="san-luis-potosi"
+                                                        />
+                                                        <label
+                                                            class="form-check-label"
+                                                            for="san-luis-potosi"
+                                                            >San Luis
+                                                            Potosí</label
+                                                        >
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="sinaloa"
+                                                                value="sinaloa"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="sinaloa"
+                                                                >Sinaloa</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="sonora"
+                                                                value="sonora"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="sonora"
+                                                                >Sonora</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="tabasco"
+                                                                value="tabasco"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="tabasco"
+                                                                >Tabasco</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="tamaulipas"
+                                                                value="tamaulipas"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="tamaulipas"
+                                                                >Tamaulipas</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="tlaxcala"
+                                                                value="tlaxcala"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="tlaxcala"
+                                                                >Tlaxcala</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="veracruz"
+                                                                value="veracruz"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="veracruz"
+                                                                >Veracruz</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="yucatan"
+                                                                value="yucatan"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="yucatan"
+                                                                >Yucatán</label
+                                                            >
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="checkbox"
+                                                                name="congreso[]"
+                                                                id="zacatecas"
+                                                                value="zacatecas"
+                                                            />
+                                                            <label
+                                                                class="form-check-label"
+                                                                for="zacatecas"
+                                                                >Zacatecas</label
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2
+                                            class="accordion-header"
+                                            id="federal-header"
+                                        >
+                                            <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#federal-collapse"
+                                                aria-expanded="false"
+                                                aria-controls="federal-collapse"
+                                            >
+                                                Federal
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="federal-collapse"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="federal-header"
+                                        >
+                                            <div class="accordion-body d-flex">
+                                                <div class="form-check">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        name="federal[]"
+                                                        id="secretaria-gobernacion"
+                                                        value="secretaria-gobernacion"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="secretaria-gobernacion"
+                                                        >Secretaría de
+                                                        gobernación</label
+                                                    >
+                                                </div>
+                                                <div class="form-check">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        name="federal[]"
+                                                        id="secretaria-economia"
+                                                        value="secretaria-economia"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="secretaria-economia"
+                                                        >Secretaría de
+                                                        economía</label
+                                                    >
+                                                </div>
+                                                <div class="form-check">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        name="federal[]"
+                                                        id="secretaria-salud"
+                                                        value="secretaria-salud"
+                                                    />
+                                                    <label
+                                                        class="form-check-label"
+                                                        for="secretaria-salud"
+                                                        >Secretaría de
+                                                        salud</label
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-flex flex-column">
+                                <button type="submit" class="btn btn-primary">
+                                    Agregar Keyword
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <script
             type="text/javascript"

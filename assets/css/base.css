@@ -117,6 +117,10 @@ html {
     color: #B42318;
 }
 
+/* #modalAgregarKeyword{
+    width: ;
+} */
+
 @media (min-width: 992px) {
 
     /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor a 991px */
