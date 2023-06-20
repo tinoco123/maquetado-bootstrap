@@ -23,7 +23,7 @@ var tableData = [
 
 
 var accionIcons = function (cell, formatterParams) { //plain text value
-    var accionHTML = "<button class='btn p-2' data-bs-toggle='modal' data-bs-target='#editarUsuario'><i class='bi bi-pen fs-5'></i></button> <button class='btn p-2' data-bs-toggle='modal' data-bs-target='#editarUsuario'><i class='bi bi-trash fs-5'></i></button>"
+    var accionHTML = "<button class='btn p-2' data-bs-toggle='modal' data-bs-target='#editarUsuario'><i class='bi bi-pen fs-5'></i></button> <button class='btn p-2' data-bs-toggle='modal' data-bs-target='#eliminarUsuario'><i class='bi bi-trash fs-5'></i></button>"
     return accionHTML;
 };
 
