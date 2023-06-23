@@ -359,7 +359,11 @@
                         <div
                             class="d-flex flex-column flex-md-row align-items-center justify-content-center enviar-email"
                         >
-                            <form action="" method="get" class="d-flex">
+                            <form
+                                action=""
+                                method="get"
+                                class="d-flex flex-column"
+                            >
                                 <div
                                     class="list-group list-group-radio d-flex m-0 border-0"
                                 >
@@ -403,9 +407,7 @@
                                         <label
                                             class="list-group-item py-3 pe-5"
                                             for="enviar-lista-difusion"
-                                            
                                         >
-                                            
                                             <strong class="fw-semibold"
                                                 >Lista de difusión:</strong
                                             >
@@ -415,11 +417,12 @@
                                                 enviarán a tu lista de
                                                 difusión</span
                                             >
-                                            <div class="form-check mt-2 d-flex justify-content-start">
+                                            <div
+                                                class="form-check mt-2 d-flex justify-content-start"
+                                            >
                                                 <input
                                                     class="form-check-input"
                                                     type="checkbox"
-                                                    value=""
                                                     id="select-all"
                                                 />
                                                 <label
@@ -441,14 +444,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-1"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario1@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-1"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario1@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -463,14 +466,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-2"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario2@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-2"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario2@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -485,14 +488,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-3"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario3@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-3"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario3@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -507,14 +510,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-4"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario4@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-4"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario4@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -533,14 +536,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-5"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario5@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-5"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario5@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -555,14 +558,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-6"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario6@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-6"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario6@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -577,14 +580,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-7"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario7@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-7"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario7@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -599,14 +602,14 @@
                                                                 class="form-check-input mt-0"
                                                                 id="checkbox-8"
                                                                 type="checkbox"
-                                                                value=""
+                                                                name="lista-difusion[]"
+                                                                value="usuario8@mail.com"
                                                                 aria-label="Checkbox for following text input"
                                                             />
                                                             <label
                                                                 for="checkbox-8"
                                                                 class="ms-2"
-                                                                >Jonathan
-                                                                Tinoco</label
+                                                                >usuario8@mail.com</label
                                                             >
                                                         </div>
                                                     </div>
@@ -615,20 +618,11 @@
                                         </label>
                                     </div>
                                 </div>
+                                <button class="btn btn-primary mt-3">
+                                    Enviar resultados
+                                </button>
                             </form>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                        >
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            Save changes
-                        </button>
                     </div>
                 </div>
             </div>
