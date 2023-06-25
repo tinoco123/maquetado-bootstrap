@@ -355,18 +355,14 @@
                         ></button>
                     </div>
                     <div class="modal-body">
-                        <p>Selecciona una opción:</p>
                         <div
                             class="d-flex flex-column flex-md-row align-items-center justify-content-center enviar-email"
                         >
-                            <form
-                                action=""
-                                method="get"
-                                class="d-flex flex-column"
-                            >
+                            <form action="" method="get" class="d-flex">
                                 <div
-                                    class="list-group list-group-radio d-flex m-0 border-0"
+                                    class="list-group list-group-radio d-grid gap-3 border-0"
                                 >
+                                    <p>Selecciona una opción:</p>
                                     <div class="position-relative">
                                         <input
                                             class="form-check-input position-absolute top-50 end-0 me-3 fs-5"
@@ -396,32 +392,34 @@
                                         </label>
                                     </div>
 
-                                    <div class="position-relative mt-3">
+                                    <div class="position-relative">
                                         <input
                                             class="form-check-input position-absolute top-50 end-0 me-3 fs-5"
                                             type="radio"
                                             name="enviar-resultados"
                                             id="enviar-lista-difusion"
                                         />
+                                        <div class="list-group-item py-3 pe-5">
+                                            <label
+                                                for="enviar-lista-difusion"
+                                                class="label-lista-difusion"
+                                            >
+                                                <strong class="fw-semibold"
+                                                    >Lista de difusión:</strong
+                                                >
+                                                <span
+                                                    class="d-block small opacity-75"
+                                                    >Los resultados de búsqueda
+                                                    se enviarán a tu lista de
+                                                    difusión</span
+                                                >
+                                            </label>
 
-                                        <label
-                                            class="list-group-item py-3 pe-5"
-                                            for="enviar-lista-difusion"
-                                        >
-                                            <strong class="fw-semibold"
-                                                >Lista de difusión:</strong
-                                            >
-                                            <span
-                                                class="d-block small opacity-75"
-                                                >Los resultados de búsqueda se
-                                                enviarán a tu lista de
-                                                difusión</span
-                                            >
                                             <div
                                                 class="form-check mt-2 d-flex justify-content-start"
                                             >
                                                 <input
-                                                    class="form-check-input"
+                                                    class="form-check-input mt-1"
                                                     type="checkbox"
                                                     id="select-all"
                                                 />
@@ -432,6 +430,7 @@
                                                     Seleccionar todos
                                                 </label>
                                             </div>
+
                                             <div class="d-flex">
                                                 <div class="contactos">
                                                     <div
@@ -615,12 +614,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </label>
+                                        </div>
                                     </div>
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                    >
+                                        Enviar resultados
+                                    </button>
                                 </div>
-                                <button class="btn btn-primary mt-3">
-                                    Enviar resultados
-                                </button>
                             </form>
                         </div>
                     </div>
