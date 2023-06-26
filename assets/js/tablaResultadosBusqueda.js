@@ -18,7 +18,7 @@ var tableData = [
     { id: 17, pagina: "Elecciones presidenciales", date: "23-09-2001", estado: "Veracruz", url: "www.gob.mx/elecciones", zona: "Federal", categoria: "Elecciones", acciones: "Acciones" },
     { id: 18, pagina: "La democracia en retroceso", date: "23-09-2001", estado: "Cuernavaca", url: "www.gob.mx/democracia", zona: "Federal", categoria: "Democracia", acciones: "Acciones" },
     { id: 19, pagina: "Elecciones presidenciales", date: "23-09-2001", estado: "Veracruz", url: "www.gob.mx/elecciones", zona: "Federal", categoria: "Elecciones", acciones: "Acciones" },
-    { id:20, pagina: "La democracia en retroceso", date: "23-09-2001", estado: "Cuernavaca", url: "www.gob.mx/democracia", zona: "Federal", categoria: "Democracia", acciones: "Acciones" },
+    { id: 20, pagina: "La democracia en retroceso", date: "23-09-2001", estado: "Cuernavaca", url: "www.gob.mx/democracia", zona: "Federal", categoria: "Democracia", acciones: "Acciones" },
     { id: 21, pagina: "Elecciones presidenciales", date: "23-09-2001", estado: "Veracruz", url: "www.gob.mx/elecciones", zona: "Federal", categoria: "Elecciones", acciones: "Acciones" },
     { id: 22, pagina: "La democracia en retroceso", date: "23-09-2001", estado: "Cuernavaca", url: "www.gob.mx/democracia", zona: "Federal", categoria: "Democracia", acciones: "Acciones" },
     { id: 23, pagina: "Elecciones presidenciales", date: "23-09-2001", estado: "Veracruz", url: "www.gob.mx/elecciones", zona: "Federal", categoria: "Elecciones", acciones: "Acciones" },
@@ -32,18 +32,21 @@ var tableData = [
 ]
 
 
+
+
 var printIcon = function (cell, formatterParams) { //plain text value
-    return "<i data-bs-toggle='modal' data-bs-target='#exampleModal' class='bi bi-eye fs-5 me-1'></i> <i class='bi bi-trash fs-5'></i>";
+    var accionHTML = "<button class='btn p-2' data-bs-toggle='modal' data-bs-target='#modalVerResultadosBusqueda'><i class='bi bi-eye fs-5'></i></button> <button class='btn p-2' data-bs-toggle='modal' data-bs-target='#modalEliminarResultadoBusqueda'><i class='bi bi-trash fs-5'></i></button>"
+    return accionHTML;
 };
 
 var table = new Tabulator("#example-table", {
-    layout:"fitDataStretch",
+    layout: "fitDataStretch",
     data: tableData, //set initial table data
-    pagination:"true",
-    pagination:true,
-    paginationSize:10,
-    paginationSizeSelector:[10, 25, 50, 100, true],
-    paginationCounter:"rows",
+    pagination: "true",
+    pagination: true,
+    paginationSize: 10,
+    paginationSizeSelector: [10, 25, 50, 100, true],
+    paginationCounter: "rows",
     columns: [
         {
             formatter: "rowSelection", titleFormatter: "rowSelection", hozAlign: "center", headerHozAlign: "center", resizable: false, headerSort: false, cellClick: function (e, cell) {
@@ -55,12 +58,12 @@ var table = new Tabulator("#example-table", {
         { title: "Estado", field: "estado" },
         { title: "URL", field: "url" },
         { title: "Zona", field: "zona" },
-        { title: "Categoría", field: "categoria", cssClass:"status" },
-        { title: "Acciones", formatter: printIcon, width: 107, hozAlign: "center", headerHozAlign: "center", headerSort: false},
+        { title: "Categoría", field: "categoria", cssClass: "status" },
+        { title: "Acciones", formatter: printIcon, width: 107, hozAlign: "center", headerHozAlign: "center", headerSort: false },
     ],
 });
 
-table.on("rowSelected", function(row){
+table.on("rowSelected", function (row) {
     //row - row component for the selected row
 
     var rowData = row.getData()

@@ -291,11 +291,12 @@
             </div>
         </div>
 
+        <!-- Modal visualizar resultado de busqueda-->
         <div
             class="modal fade"
-            id="exampleModal"
+            id="modalVerResultadosBusqueda"
             tabindex="-1"
-            aria-labelledby="exampleModalLabel"
+            aria-labelledby="modal ver resultados de busqueda"
             aria-hidden="true"
         >
             <div
@@ -389,7 +390,9 @@
                                     </tr>
                                     <tr>
                                         <th scope="row" class="titulo-ver-mas">
-                                            <i class="bi bi-person-square me-3"></i
+                                            <i
+                                                class="bi bi-person-square me-3"
+                                            ></i
                                             >Autores
                                         </th>
                                         <td>Grupo expansión</td>
@@ -741,6 +744,54 @@
             </div>
         </div>
 
+        <!-- Modal eliminar resultado de busqueda -->
+        <div
+            class="modal fade"
+            id="modalEliminarResultadoBusqueda"
+            tabindex="-1"
+            aria-labelledby="modal eliminar resultado de busqueda"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            <span class="ms-2"
+                                >Eliminar resultado de búsqueda</span
+                            >
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="fs-5">
+                            ¿Estás seguro que quieres eliminar este resultado de
+                            búsqueda? Esta acción no se puede deshacer
+                        </p>
+                        <p>
+                            <span class="fw-bold">Página:</span> Elecciones
+                            presidenciales
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Cancelar
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script
             type="text/javascript"
             src="https://unpkg.com/tabulator-tables@5.5.0/dist/js/tabulator.min.js"
