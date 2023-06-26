@@ -39,7 +39,8 @@ var tableData = [
 
 
 var acctionIcons = function (cell, formatterParams) { //plain text value
-    return "<i class='bi bi-pen fs-5 me-1'></i> <i class='bi bi-trash fs-5'></i>";
+    var accionHTML = "<button class='btn p-2' data-bs-toggle='modal' data-bs-target='#modalEditarKeyword'><i class='bi bi-pen fs-5'></i></button> <button class='btn p-2' data-bs-toggle='modal' data-bs-target='#modalEliminarKeyword'><i class='bi bi-trash fs-5'></i></button>"
+    return accionHTML;
 };
 
 var statusFormatter = function (cell, formatterParams) { //plain text value
