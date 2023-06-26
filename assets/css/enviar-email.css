@@ -1,7 +1,7 @@
 .enviar-email{
   width: 465px;
 }
-.list-group {
+form .list-group {
     width: 100%;
     max-width: 465px;
     margin-inline: 1.5rem;
