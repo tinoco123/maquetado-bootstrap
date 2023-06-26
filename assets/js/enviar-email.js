@@ -6,6 +6,7 @@ var selectAll = document.getElementById("select-all");
 var checkboxesContacts = document.querySelectorAll(
   ".contactos .form-check-input"
 );
+var btnAgregarContacto = document.getElementById("agregarContacto")
 
 
 enviarEmailEspecifico.addEventListener('change', function () {
