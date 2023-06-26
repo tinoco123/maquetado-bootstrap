@@ -117,9 +117,9 @@ html {
     color: #B42318;
 }
 
-/* #modalAgregarKeyword{
-    width: ;
-} */
+.titulo-ver-mas{
+    width: 120px;
+}
 
 @media (min-width: 992px) {
 
