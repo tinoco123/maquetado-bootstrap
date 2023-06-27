@@ -43,6 +43,7 @@ var table = new Tabulator("#example-table", {
         },
         { title: "ID", field: "id", sorter: "number" },
         { title: "Nombre", field: "nombre" },
+        { title: "Empresa", field: "empresa" },
         { title: "Fecha de registro", field: "date", sorter: "date" },
         { title: "Acciones", formatter: accionIcons, width: 107, hozAlign: "center", headerHozAlign: "center", headerSort: false },
     ],
