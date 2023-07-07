@@ -201,6 +201,43 @@
                                 />
                             </div>
                             <div class="col-12">
+                                <label class="form-label">Frecuencia de búsqueda</label>
+                                <div class="d-flex">
+                                    <div class="col-6 mt-2">
+                                        <div class="btn-group btn-group-sm d-flex" role="group" aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check" name="dias" id="diario" autocomplete="off" checked>
+                                            <label class="btn btn-outline-primary" for="diario">Diario</label>
+                                          
+                                            <input type="radio" class="btn-check" name="dias" id="semanal" autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="semanal">Semanal</label>
+                                          
+                                            <input type="radio" class="btn-check" name="dias" id="mensual" autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="mensual">Mensual</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <label for="calendar" class="form-label">Día específico</label>
+                                            <input type="date" name="dia-especifico" id="calendar" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mt-2 ms-2">
+                                        <div class="btn-group btn-group-sm d-flex" role="group" aria-label="Basic radio toggle button group">
+                                            <input type="radio" class="btn-check" name="horas" id="3 horas" autocomplete="off" checked>
+                                            <label class="btn btn-outline-primary" for="3 horas">3 horas</label>
+                                          
+                                            <input type="radio" class="btn-check" name="horas" id="6 horas" autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="6 horas">6 horas</label>
+                                          
+                                            <input type="radio" class="btn-check" name="horas" id="12 horas" autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="12 horas">12 horas</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <label for="hora-especifica" class="form-label">Hora específico</label>
+                                            <input type="time" name="hora-especifica" id="hora-especifica" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
                                 <label for="tipo" class="form-label"
                                     >Selecciona el tipo de keyword</label
                                 >
